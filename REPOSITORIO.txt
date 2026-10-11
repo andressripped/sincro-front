@@ -1,0 +1,12 @@
+Repositorio del proyecto
+========================
+
+https://github.com/andressripped/sincro-front
+
+Evidencia GA7-220501096-AA4-EV03
+Componente front-end del proyecto formativo
+
+Julian Andres Albarracin Martinez
+Ficha 3336228
+Analisis y Desarrollo de Software
+Centro Agroturistico de San Gil - Regional Santander

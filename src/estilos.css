@@ -1,0 +1,163 @@
+/* Paleta y tipografia definidas en el prototipo del proyecto Sincro */
+:root {
+  --verde-principal: #1B4D3E;
+  --verde-medio: #2D6B52;
+  --verde-claro: #D9EDE2;
+  --gris-fondo: #F0F3F1;
+  --ambar: #FDF0D5;
+  --rojo: #B03A2E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--gris-fondo);
+  color: #1f2a26;
+  line-height: 1.5;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.encabezado h1 { font-size: 26px; }
+.encabezado p { font-size: 14px; opacity: 0.85; }
+.encabezado nav { display: flex; gap: 20px; }
+.encabezado nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+.encabezado nav a.active { border-bottom-color: var(--verde-claro); }
+
+.contenido { max-width: 1000px; margin: 32px auto; padding: 0 20px; min-height: 60vh; }
+
+h2 { color: var(--verde-principal); font-size: 23px; margin-bottom: 16px; }
+h3 { color: var(--verde-principal); font-size: 17px; margin: 22px 0 12px; }
+
+/* Inicio */
+.inicio p { margin-bottom: 22px; max-width: 620px; }
+
+/* Botones */
+.boton, .boton-secundario {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+.boton { background-color: var(--verde-principal); color: #ffffff; }
+.boton:hover { background-color: var(--verde-medio); }
+.boton:disabled { background-color: #9bb0a7; cursor: not-allowed; }
+.boton-secundario {
+  background: none;
+  color: var(--verde-principal);
+  border: 1px solid var(--verde-principal);
+}
+
+/* Reserva */
+.columnas { display: grid; grid-template-columns: 1fr 280px; gap: 28px; align-items: start; }
+.servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.tarjeta {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.tarjeta:hover { border-color: var(--verde-claro); }
+.tarjeta-activa { border-color: var(--verde-principal); background-color: var(--verde-claro); }
+.tarjeta h3 { margin: 0 0 6px; font-size: 16px; }
+.duracion { font-size: 14px; color: #5b6b64; }
+.precio { font-weight: 600; color: var(--verde-medio); margin-top: 6px; }
+
+.selector { display: flex; gap: 10px; flex-wrap: wrap; }
+.opcion {
+  background-color: #ffffff;
+  border: 1px solid #c7d4ce;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 58px;
+}
+.opcion-activa { background-color: var(--verde-principal); color: #ffffff; border-color: var(--verde-principal); }
+.opcion:disabled { background-color: #e7ebe9; color: #9aa7a1; cursor: not-allowed; text-decoration: line-through; }
+.dia-nombre { font-size: 12px; opacity: 0.8; }
+.dia-numero { font-size: 17px; font-weight: 600; }
+
+.resumen { background-color: #ffffff; border-radius: 6px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.resumen h3 { margin-top: 0; }
+.resumen dt { font-size: 13px; color: #5b6b64; margin-top: 10px; }
+.resumen dd { font-weight: 600; margin-bottom: 4px; }
+.resumen .boton { margin-top: 18px; width: 100%; }
+
+.aviso { background-color: #ffffff; padding: 16px; border-radius: 6px; color: #5b6b64; }
+
+/* Mensajes */
+.mensaje {
+  background-color: var(--ambar);
+  border-left: 4px solid var(--verde-medio);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.mensaje-error { background-color: #FBE3E0; border-left-color: var(--rojo); }
+
+/* Clientes */
+.barra { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 12px; }
+.barra h2 { margin: 0; }
+
+.tabla { width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.tabla thead { background-color: var(--verde-claro); }
+.tabla th, .tabla td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e4eae7; font-size: 15px; }
+.tabla th { color: var(--verde-principal); font-weight: 600; }
+.tabla tbody tr:last-child td { border-bottom: none; }
+
+.acciones { display: flex; gap: 14px; }
+.enlace, .enlace-rojo {
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 15px; font-weight: 600; padding: 0;
+}
+.enlace { color: var(--verde-medio); }
+.enlace-rojo { color: var(--rojo); }
+.enlace:hover, .enlace-rojo:hover { text-decoration: underline; }
+
+.total { margin-top: 14px; color: var(--verde-medio); font-weight: 600; }
+
+/* Formularios */
+.formulario { background-color: #ffffff; padding: 22px; border-radius: 6px; margin-bottom: 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.formulario h3 { margin-top: 0; }
+.campo { margin-bottom: 16px; }
+.campo label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--verde-principal); font-size: 15px; }
+.campo input { width: 100%; padding: 10px 12px; border: 1px solid #c7d4ce; border-radius: 4px; font-size: 15px; font-family: inherit; }
+.campo input:focus { outline: 2px solid var(--verde-medio); border-color: transparent; }
+.campo input.con-error { border-color: var(--rojo); }
+.error { display: block; color: var(--rojo); font-size: 14px; margin-top: 5px; }
+.acciones-formulario { display: flex; gap: 12px; }
+
+/* Pie */
+.pie { text-align: center; padding: 24px; color: #6b7a74; font-size: 14px; }
+
+/* Pantallas pequenas */
+@media (max-width: 860px) {
+  .columnas { grid-template-columns: 1fr; }
+}
